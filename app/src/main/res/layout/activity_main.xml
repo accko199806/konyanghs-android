@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="#E6dddddd"
+            android:scaleType="centerCrop"
+            android:src="@drawable/schoolbg" />
+
+        <View
+            android:id="@+id/statusbar"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="#00000000" />
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:layout_below="@id/statusbar"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:src="@drawable/item_school_name" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/menuLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/bapText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center"
+                    android:text="급식"
+                    android:textColor="#303030"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#e5e5e5" />
+
+                <TextView
+                    android:id="@+id/notiText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center"
+                    android:text="공지"
+                    android:textColor="#303030"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/noticelist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/menuLayout"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:listSelector="#00000000"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:scrollbars="none" />
+
+            <RelativeLayout
+                android:id="@+id/helloLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/menuLayout"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/appinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="건양고등학교앱 정보"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="제작 : 2017 건양고등학교 It is It 동아리\n\n급식 정보 (100KB ~ 150KB)\n공지사항 (80KB ~ 85KB)"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appinfo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/settings_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_settings_24dp" />
+
+                    <ImageButton
+                        android:id="@+id/contact_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="8dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:src="@drawable/ic_contact_24dp" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/menuLayout"
+                android:background="@drawable/background_shadow" />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bapLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/menuLayout"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                app:cardCornerRadius="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sunText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="일"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#e5e5e5" />
+
+                    <TextView
+                        android:id="@+id/monText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="월"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#e5e5e5" />
+
+                    <TextView
+                        android:id="@+id/tueText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="화"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#e5e5e5" />
+
+                    <TextView
+                        android:id="@+id/wedText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="수"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#e5e5e5" />
+
+                    <TextView
+                        android:id="@+id/thuText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="목"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#e5e5e5" />
+
+                    <TextView
+                        android:id="@+id/friText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="금"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#e5e5e5" />
+
+                    <TextView
+                        android:id="@+id/satText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:fontFamily="@font/bmjua"
+                        android:gravity="center"
+                        android:text="토"
+                        android:textAppearance="?android:attr/textAppearanceButton"
+                        android:textColor="#404040"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/showBap"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/timeShadow"
+                android:layout_below="@+id/bapLayout"
+                android:fontFamily="@font/bmjua"
+                android:padding="8dp"
+                android:gravity="center"
+                android:lineSpacingExtra="10dp"
+                android:textSize="30sp" />
+
+            <View
+                android:id="@+id/timeShadow"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_above="@id/timeLayout"
+                android:background="#e5e5e5" />
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                android:lineSpacingExtra="5dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/morText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center"
+                    android:text="아침"
+                    android:textAppearance="?android:attr/textAppearanceButton"
+                    android:textColor="#303030"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#e5e5e5" />
+
+                <TextView
+                    android:id="@+id/lunText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center"
+                    android:text="점심"
+                    android:textAppearance="?android:attr/textAppearanceButton"
+                    android:textColor="#303030"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#e5e5e5" />
+
+                <TextView
+                    android:id="@+id/dinText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:fontFamily="@font/bmjua"
+                    android:gravity="center"
+                    android:text="저녁"
+                    android:textAppearance="?android:attr/textAppearanceButton"
+                    android:textColor="#303030"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/bottomShadow"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_below="@id/timeLayout"
+                android:background="#000000" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

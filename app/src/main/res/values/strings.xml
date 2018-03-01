@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">건양고학교앱</string>
+    <string name="settings">설정</string>
+
+    <string name="about_license">the "'less-than'" sign logo and the design assets are protected by <b>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</b>(CC-BY-NC-ND 4.0).</string>
+
+    <string name="app_version">앱 버전</string>
+
+    <string name="opensource_project">오픈소스 프로젝트</string>
+    <string name="opensource_project_text">앱의 모든 소스와 작업 현황을 확인합니다.</string>
+
+    <string name="opensource_license">오픈소스 라이선스</string>
+    <string name="opensource_license_text">앱에 사용된 오픈소스 라이선스를 확인합니다.</string>
+
+    <string name="baproading">급식을 불러오는 중입니다..</string>
+    <string name="notiroading">공지를 불러오는 중입니다..</string>
+    <string name="notconnect_internet">인터넷에 연결되지 않아 불러오기를 중단합니다.</string>
+    
+    <string name="today_lunch">오늘의 점심</string>
+    <string name="today_dinner">오늘의 저녁</string>
+    <string name="no_data_lunch">점심이 없습니다</string>
+    <string name="no_data_dinner">저녁이 없습니다</string>
+    <string name="no_data_title">정보 없음</string>
+    <string name="no_data_message">정보가 없습니다.</string>
+    <string name="widget_no_data">데이터가 없습니다 날짜를 눌러 새로고침 하세요</string>
+
+    <string name="roading">로딩중..</string>
+    <string name="bap_error">급식을 불러올 수 없습니다.\n앱에 오류가 있거나, 경자쌤이 등록을 안한 상태입니다.</string>
+    <string name="widget_bap_loading">데이터가 없습니다.\n날짜를 눌러 새로고침하세요.</string>
+
+</resources>

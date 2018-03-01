@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="145dip"
+        android:layout_marginTop="16dp"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="16dip"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/license"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dip"
+        android:fontFamily="@font/bmjua"
+        android:gravity="center_vertical|center_horizontal"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="8dip"
+        android:text="@string/about_license"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/license"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:clickable="false"
+        android:padding="16dp"
+        app:cardCornerRadius="4px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <net.accko.konyanghs.util.PreferenceView
+                android:id="@+id/preferenceVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:name="@string/app_version"
+                app:symbol="@mipmap/ic_launcher_round"
+                app:text="1.0" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="72dp"
+                android:background="#e5e5e5" />
+
+            <net.accko.konyanghs.util.PreferenceView
+                android:id="@+id/preferenceosp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:name="@string/opensource_project"
+                app:symbol="@mipmap/ic_license"
+                app:text="@string/opensource_project_text" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="72dp"
+                android:background="#e5e5e5" />
+
+            <net.accko.konyanghs.util.PreferenceView
+                android:id="@+id/preferenceosl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:name="@string/opensource_license"
+                app:symbol="@mipmap/ic_license"
+                app:text="@string/opensource_license_text" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

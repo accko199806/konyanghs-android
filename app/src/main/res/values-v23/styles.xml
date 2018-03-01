@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="main" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="android:colorPrimaryDark">#7a7a7a</item>
+        <item name="colorAccent">#7a7a7a</item>
+        <item name="android:textColor">#303030</item>
+
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="settings" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorAccent">#7a7a7a</item>
+        <item name="android:textColor">#303030</item>
+
+        <item name="android:statusBarColor">#fafafa</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

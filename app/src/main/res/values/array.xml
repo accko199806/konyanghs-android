@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PreferenceView">
+        <attr name="symbol" format="reference|integer" />
+        <attr name="name" format="reference|string" />
+        <attr name="text" format="reference|string" />
+    </declare-styleable>
+
+</resources>
